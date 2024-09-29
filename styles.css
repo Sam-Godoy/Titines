@@ -1,0 +1,76 @@
+body {
+    background-color: #ffcccb;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Para que el contenido comience desde arriba */
+    min-height: 100vh; /* Altura mínima para cubrir la pantalla */
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%; /* Para que se ajuste bien en pantallas pequeñas */
+    margin-top: 20px; /* Espacio superior */
+}
+
+h1 {
+    color: #e63946;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4b5c;
+}
+
+#contenido {
+    background-color: #fefbd8; /* Color de fondo de la carta */
+    border: 2px solid #e63946; /* Borde de la carta */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio entre el título y la carta */
+    font-size: 1.1em;
+    text-align: left; /* Alinear texto a la izquierda */
+    overflow: auto; /* Hacer que el contenido sea scrollable si es muy largo */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #contenido {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}
