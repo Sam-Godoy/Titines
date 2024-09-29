@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con LocalStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Entrar</button>
+        <p id="error-message" style="color:red;"></p>
+    </div>
+
+    <div id="content-container" class="container" style="display:none;">
+        <h1>KATITA TITINES</h1>
+        <p id="contenido-protegido" style="color:rgb(0, 0, 0);">Hola preciosa, ¿cómo estás? De corazón espero que estés muy bien. Hace tanto que no sé de vos, y probablemente así es como las cosas deben ser. Sin embargo...style="color:red;"</p>
+        <p id="contenido-protegido">El motivo de la presente es porque quiero darte un mensaje y hago uso de Stitch cuando me dijiste en mi cumple que, si un día quería volver a vos, que pensara en él y lo que vivimos esa noche (por cierto, para mí la noche más linda del mundo) y lo hiciera. Así que "Heme aquí". Creo que la mejor manera de empezar esto es diciéndote que te amo. Realmente no ha habido un solo día desde que me fui en el que no haya pensado en vos. Literal hay días en los que termino cansado de tanto pensarte… de recordarte: quién fuiste, quién fui, quiénes fuimos y quiénes somos ahora.</p>
+        <p>Te quiero agradecer por los buenos momentos y por haber estado conmigo tantos años, agradecerte por la relación tan hermosa que me diste, ya que nunca me dejaste hacerlo cuando partí.</p>
+        <p>Sin embargo, ahora más que nunca quiero darte las gracias por dejarme ir... realmente necesitaba perderte para encontrarme. Necesitaba ese sufrimiento para crecer. Me llevó mucho tiempo, pero ahora soy feliz. He cometido errores, ganado y perdido; he nivelado mis estudios, trabajo, gimnasio, familia, amigos, incluso mi área más espiritual. Dios me ha permitido viajar, conocer lugares increíbles, asistir a eventos con los que antes solo había soñado vivirlos, y tener cosas que jamás imaginé. A veces, las decisiones correctas son tristes.</p>
+        <p>Ahora estoy siendo la mejor persona que sé que puedo ser y me encamino a ser la mejor persona que sé que puedo llegar a ser. Sin embargo, siempre me haces falta vos, y es irónico, porque leí algo que ejemplifica cómo me siento generalmente: "Qué triste para este paraíso que me lo da todo, vivir opacado por lo felices que fuimos juntos cuando no tenía nada".</p>
+        <p>Y es extraño, porque yo me fui y vos te quedaste, pasaste página, no quieres saber de mí y lo entiendo. Pero qué doloroso saber que yo no puedo seguir adelante, ya que camino y tropiezo en una esquina cualquiera porque escucho TU RISA, Y VOLTEO, Y TE BUSCO, Y TE ESPERO, Y TENECESITO Y TE AMO. Solo para darme cuenta de que la llevo adentro, y que toda persona a la que le hable de vos no va a entender lo que fuimos en el corto tiempo que pudimos ser.</p>
+        <p>Para vos debe ser más fácil, con una ciudad entera a la que odiar cuando (y sí) te acordás de mí, mientras yo pienso en vos solo porque no puedo sacarme de encima la costumbre de llevarte conmigo.</p>
+        <p>No me queda más que hacerme cargo de que, si seguís en mi cabeza, el problema soy yo. Yo que te conocía como la palma de mi mano, y hoy no conozco nada ni a nadie. El problema SOY YO, porque no hay paisaje perfecto si no estás vos, pero que no pude quedarme en la relación porque ahí solo estabas vos. "Y el mundo entero no puede reemplazarte, pero vos no podés reemplazar al mundo entero".</p>
+        <p>Todo este tiempo he estado soltero y lo he disfrutado. En algún momento, quizás pensé quedarme así para siempre, pero analizando a dónde quiero conducir mi vida, entiendo que es un momento oportuno para empezar una relación. Y claro, podría darme la oportunidad de conocer a alguien con esa intención, pero el problema es que te llevo tatuada en el pecho. Traté de negar eso por mucho tiempo, pero vivir en negación ya no forma parte de mis planes, por lo que decido aceptar lo que realmente siento y decirte:</p>
+        <p>Lo siento, de verdad lo siento. Debí buscarte antes, lamento no haber tenido el valor todo este tiempo… Han sido dos años difíciles entre aceptar mis errores y mis sentimientos hacia todo lo que fuimos.</p>
+        <p>Y yo entiendo que probablemente rehiciste tu vida. No sé si tendrás pareja o simplemente yo te doy asco, o me odiás, y no querrás saber de mí, lo cual es entendible. Lo comprendo y no pasa nada. Te pido perdón por alterar tu status quo y te prometo que no se repetirá. Solo te pido que me entiendas. Hay una frase que dice: "Toda declaración de amor es urgente porque vamos a morir". Y realmente prefiero morir sabiendo que te pedí perdón y te dije que te amaba, tragándome el orgullo, a no hacerlo.</p>
+        <p>No viviré tranquilo sin al menos saber que intenté volver a quien yo amo. Por lo que, si decís que no querés verme nunca más, estás en todo tu derecho. Créeme que te doy las gracias por todo lo que vivimos y te deseo que seas infinitamente feliz, que te llenes de éxito y encontrés la paz que yo creo que, en el fondo, todos buscamos. Te amo infinitamente y, claro, tengo mi vida y seguiré adelante, pero tené por seguro que siempre habrá un espacio en mi corazón para nuestra historia.</p>
+        <p>Lamento todo el daño que te hice dentro y fuera de la relación. Todo este tiempo me ha ayudado a mejorar como persona y entiendo todo lo que he hecho. Como te digo, es casi una carta al aire. Entiendo que la posibilidad de volverte a ver es risible, pero si hubiera una pequeña esperanza de volver a conocernos, me encantaría enseñarte quién soy ahora.</p>
+        <p>Por lo que me encantaría decirte:
+            Te espero sin peros y sin condiciones.
+            Te espero en la puerta.
+            Te espero con flores.
+            Te espero en mi casa, helado en la cocina.
+            Te espero esta noche o toda la vida.
+            Te espero a tu tiempo y yo no te apuro.
+            Te espero en las buenas.
+            Te espero en lo oscuro.
+            Te espero en la playa donde te prometí que un día iba a volver por ti.
+            Te espero y juro que sigo esperando que vos, algún día, también me estés buscando.
+            </p>
+        <p>Si no es así, lo entiendo. Lamento interrumpir tu vida y te prometo que no volverá a ocurrir. En ese caso, aún tengo tu foto de graduación de prepa y podría dártela. Lo digo porque sé que eso es importante para tu historia, además que "Conservar algo que me ayude a recordarte sería admitir que puedo olvidarte". Te deseo una dulce y feliz vida... mi vida.</p>
+        
+
+
+    
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
