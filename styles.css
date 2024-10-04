@@ -27,7 +27,7 @@ video {
 }
 
 .container {
-    background-image: url('videos/Arte\,\ Gráfico\,\ Decoración\ Imágenes\ de\ fondo\ gratuitas\,\ Fondo\ Diseño\ Floral\ Estampado\ Decorativo\ Foto\ de\ fondo\ PNG\ y\ vectores.jpeg'); /* Cambia esta ruta a tu imagen de fondo */
+    background-image: url('Arte\,\ Gráfico\,\ Decoración\ Imágenes\ de\ fondo\ gratuitas\,\ Fondo\ Diseño\ Floral\ Estampado\ Decorativo\ Foto\ de\ fondo\ PNG\ y\ vectores.jpeg'); /* Cambia esta ruta a tu imagen de fondo */
     background-size: cover; /* Cubre todo el contenedor */
     background-repeat: no-repeat; /* No repetir la imagen */
     background-position: center; /* Centra la imagen en el contenedor */
