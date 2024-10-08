@@ -14,7 +14,12 @@ function login() {
     if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
         // Ocultar el login y mostrar el contenido
         document.getElementById("login-container").style.display = "none";
+        
+        // Mostrar todos los contenedores de contenido
         document.getElementById("content-container").style.display = "block";
+        document.getElementById("second-container").style.display = "block";
+        document.getElementById("third-container").style.display = "block";
+        
         localStorage.setItem("loggedIn", "true"); // Marcar como logueado
     } else {
         document.getElementById("error-message").textContent = "Usuario o contraseña incorrectos";
@@ -24,7 +29,15 @@ function login() {
 // Verificar si el usuario ya está logueado
 if (localStorage.getItem("loggedIn") === "true") {
     document.getElementById("login-container").style.display = "none";
+    
+    // Mostrar todos los contenedores de contenido
     document.getElementById("content-container").style.display = "block";
+    document.getElementById("second-container").style.display = "block";
+    document.getElementById("third-container").style.display = "block";
 } else {
-    document.getElementById("content-container").style.display = "none"; // Asegurarse de que el contenido esté oculto
+    // Asegurarse de que todos los contenedores de contenido estén ocultos
+    document.getElementById("content-container").style.display = "none"; 
+    document.getElementById("second-container").style.display = "none"; 
+    document.getElementById("third-container").style.display = "none"; 
 }
+
