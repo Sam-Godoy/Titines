@@ -1,5 +1,3 @@
-// script.js
-
 // Establecer usuario y contraseña inicial en localStorage (esto lo haces solo una vez)
 if (!localStorage.getItem("username") || !localStorage.getItem("password")) {
     localStorage.setItem("username", "samuel123"); // Usuario por defecto
@@ -27,4 +25,6 @@ function login() {
 if (localStorage.getItem("loggedIn") === "true") {
     document.getElementById("login-container").style.display = "none";
     document.getElementById("content-container").style.display = "block";
+} else {
+    document.getElementById("content-container").style.display = "none"; // Asegurarse de que el contenido esté oculto
 }
