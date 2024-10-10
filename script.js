@@ -1,29 +1,88 @@
-// Establecer usuario y contraseña inicial en localStorage (esto lo haces solo una vez)
-if (!localStorage.getItem("username") || !localStorage.getItem("password")) {
-    localStorage.setItem("username", "admin2011"); // Usuario por defecto
-    localStorage.setItem("password", "190218"); // Contraseña por defecto
+body {
+    background-color: #fff8cb;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Asegura que los contenedores se alineen verticalmente */
+    align-items: center; /* Centra los contenedores horizontalmente */
+    min-height: 100vh; /* Altura mínima para cubrir la pantalla */
 }
 
-function login() {
-    const enteredUsername = document.getElementById("username").value;
-    const enteredPassword = document.getElementById("password").value;
+#video-container {
+    position: relative; /* Posición relativa para que no se superponga */
+    width: 600px; 
+    height: 600px;
+    margin-top: 30px; /* Deja espacio entre el video y el contenido anterior */
+    overflow: hidden;
+    z-index: 1;
+}
 
-    const storedUsername = localStorage.getItem("username");
-    const storedPassword = localStorage.getItem("password");
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que el video cubra todo el contenedor */
+}
 
-    if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
-        // Ocultar el login y mostrar todo el contenido protegido
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("protected-content").style.display = "block"; // Muestra todo el contenido bloqueado
-        localStorage.setItem("loggedIn", "true"); // Marcar como logueado
-    } else {
-        document.getElementById("error-message").textContent = "Usuario o contraseña incorrectos";
+.container {
+    background-image: url('videos/Arte\,\ Gráfico\,\ Decoración\ Imágenes\ de\ fondo\ gratuitas\,\ Fondo\ Diseño\ Floral\ Estampado\ Decorativo\ Foto\ de\ fondo\ PNG\ y\ vectores.jpeg'); /* Cambia esta ruta a tu imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: center; /* Centra la imagen en el contenedor */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%; /* Para que se ajuste bien en pantallas pequeñas */
+    margin: 20px 0; /* Espacio superior e inferior entre contenedores */
+    color: #333; /* Asegúrate de que el texto sea legible */
+}
+
+h1, h2 {
+    color: #e63946;
+    font-weight: bold; /* Negrita para los títulos */
+}
+
+p {
+    font-size: 1.2em;
+    color: #333; /* Color del texto en el contenedor */
+    text-align: center; /* Centrar texto en los párrafos */
+    font-weight: bold; /* Negrita para el texto */
+}
+
+.image-container {
+    max-width: 100%; /* Ajustar el tamaño de la imagen al contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4b5c;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1em;
     }
 }
-
-// Verificar si el usuario ya está logueado
-if (localStorage.getItem("loggedIn") === "true") {
-    document.getElementById("login-container").style.display = "none";
-    document.getElementById("protected-content").style.display = "block"; // Mostrar todo el contenido protegido si está logueado
-}
-
