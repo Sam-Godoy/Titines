@@ -11,8 +11,8 @@ body {
 }
 
 #video-container {
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
     margin: 60px auto; /* Centra el contenedor horizontalmente y da espacio por arriba */
     display: flex;
     justify-content: center; /* Centra el video horizontalmente */
@@ -23,7 +23,7 @@ body {
 }
 
 video {
-    width: 100%;
+    width: 200%;
     height: 100%;
     object-fit: cover; /* Para que el video cubra todo el contenedor */
 }
