@@ -12,8 +12,8 @@ body {
 
 #video-container {
     position: relative; /* Posición relativa para que no se superponga */
-    width: 300px; 
-    height: 200px;
+    width: 600px; 
+    height: 600px;
     margin-top: 30px; /* Deja espacio entre el video y el contenido anterior */
     overflow: hidden;
     z-index: 1;
@@ -86,4 +86,5 @@ button:hover {
         font-size: 1em;
     }
 }
+
 
