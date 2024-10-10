@@ -11,12 +11,15 @@ body {
 }
 
 #video-container {
-    position: relative; /* Posición relativa para que no se superponga */
-    width: 600px; 
-    height: 600px;
-    margin-top: 30px; /* Deja espacio entre el video y el contenido anterior */
+    width: 500px;
+    height: 500px;
+    margin: 60px auto; /* Centra el contenedor horizontalmente y da espacio por arriba */
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente */
     overflow: hidden;
     z-index: 1;
+    background-color: #000; /* Opcional: añade un fondo para que sea más visible */
 }
 
 video {
@@ -24,6 +27,7 @@ video {
     height: 100%;
     object-fit: cover; /* Para que el video cubra todo el contenedor */
 }
+
 
 .container {
     background-image: url('videos/Arte\,\ Gráfico\,\ Decoración\ Imágenes\ de\ fondo\ gratuitas\,\ Fondo\ Diseño\ Floral\ Estampado\ Decorativo\ Foto\ de\ fondo\ PNG\ y\ vectores.jpeg'); /* Cambia esta ruta a tu imagen de fondo */
