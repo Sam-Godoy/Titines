@@ -1,7 +1,7 @@
 // Establecer usuario y contraseña inicial en localStorage (esto lo haces solo una vez)
 if (!localStorage.getItem("username") || !localStorage.getItem("password")) {
-    localStorage.setItem("username", "samuel123"); // Usuario por defecto
-    localStorage.setItem("password", "hola1234"); // Contraseña por defecto
+    localStorage.setItem("username", "admin2011"); // Usuario por defecto
+    localStorage.setItem("password", "190218"); // Contraseña por defecto
 }
 
 function login() {
@@ -12,14 +12,9 @@ function login() {
     const storedPassword = localStorage.getItem("password");
 
     if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
-        // Ocultar el login y mostrar el contenido
+        // Ocultar el login y mostrar todo el contenido protegido
         document.getElementById("login-container").style.display = "none";
-        
-        // Mostrar todos los contenedores de contenido
-        document.getElementById("content-container").style.display = "block";
-        document.getElementById("second-container").style.display = "block";
-        document.getElementById("third-container").style.display = "block";
-        
+        document.getElementById("protected-content").style.display = "block"; // Muestra todo el contenido bloqueado
         localStorage.setItem("loggedIn", "true"); // Marcar como logueado
     } else {
         document.getElementById("error-message").textContent = "Usuario o contraseña incorrectos";
@@ -29,15 +24,6 @@ function login() {
 // Verificar si el usuario ya está logueado
 if (localStorage.getItem("loggedIn") === "true") {
     document.getElementById("login-container").style.display = "none";
-    
-    // Mostrar todos los contenedores de contenido
-    document.getElementById("content-container").style.display = "block";
-    document.getElementById("second-container").style.display = "block";
-    document.getElementById("third-container").style.display = "block";
-} else {
-    // Asegurarse de que todos los contenedores de contenido estén ocultos
-    document.getElementById("content-container").style.display = "none"; 
-    document.getElementById("second-container").style.display = "none"; 
-    document.getElementById("third-container").style.display = "none"; 
+    document.getElementById("protected-content").style.display = "block"; // Mostrar todo el contenido protegido si está logueado
 }
 
